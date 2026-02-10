@@ -1,9 +1,11 @@
-const Header = () => {
-  return (
-    <>
-      <p>ici c'est le header</p>
-    </>
-  )
-}
+import NavBar from "../components/NavBar";
 
-export default Header
+const Header = () => {
+    return (
+        <>
+            <NavBar />
+        </>
+    );
+};
+
+export default Header;
