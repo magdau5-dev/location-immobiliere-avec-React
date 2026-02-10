@@ -1,3 +1,4 @@
+import Banner from "../components/Banner";
 import TagName from "../components/TagName";
 import Thumb from "../components/Thumb";
 
@@ -6,7 +7,16 @@ const HomeSection = () => {
         <>
             <h2>Home Section Component</h2>
             <div>
-                <Thumb />
+                <Banner />
+                <div className="thumb-container">
+                    <Thumb />
+                    <Thumb />
+                    <Thumb />
+                    <Thumb />
+                    <Thumb />
+                    <Thumb />
+                </div>
+
                 <TagName />
             </div>
         </>
