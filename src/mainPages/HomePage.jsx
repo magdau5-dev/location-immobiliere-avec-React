@@ -1,9 +1,14 @@
-const HomePage = () => {
-  return (
-    <div>
-      <p>ici home page</p>
-    </div>
-  )
-}
+import HomeSection from "../sections/HomeSection";
 
-export default HomePage
+const HomePage = () => {
+    return (
+        <>
+            <h1>Home Page</h1>
+            <div>
+                <HomeSection />
+            </div>
+        </>
+    );
+};
+
+export default HomePage;
