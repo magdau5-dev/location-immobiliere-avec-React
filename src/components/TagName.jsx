@@ -1,10 +1,10 @@
 const TagName = () => {
     return (
         <>
-
-            <p>Salut du TagName</p>
-        
+            <div className="tag">
+                <p>tag-name</p>
+            </div>
         </>
-    )
-}
+    );
+};
 export default TagName;
