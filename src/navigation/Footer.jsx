@@ -1,9 +1,14 @@
-const Footer = () => {
-  return (
-    <>
-      <p>ici c'est le footer</p>
-    </>
-  )
-}
+import BoxImg from "../components/BoxImg";
 
-export default Footer
+const Footer = () => {
+    return (
+        <>
+            <div className="footer-container">
+                <BoxImg />
+                <p>© 2020 Kasa. All rights reserved</p>
+            </div>
+        </>
+    );
+};
+
+export default Footer;

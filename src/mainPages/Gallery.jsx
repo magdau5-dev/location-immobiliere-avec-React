@@ -1,16 +1,9 @@
-import TagName from '../components/TagName';
-
 const Gallery = () => {
-	return (
+    return (
         <>
-        
             <p>Salut avec la Gallery</p>
-            <TagName />
-			<TagName />
-			<TagName />
-            
-		</>
-	);
+        </>
+    );
 };
 
 export default Gallery;
