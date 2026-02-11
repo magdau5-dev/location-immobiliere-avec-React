@@ -1,10 +1,12 @@
-const Thumb = () => {
+const Thumb = ({ cover, title }) => {
     return (
-        <>
-            <div className="thumb-card">
-                <h4 className="thumb-tittle">Titre de la location</h4>
-            </div>
-        </>
+        <div
+            className="thumb-card"
+            style={{ backgroundImage: `url(${cover})` }}
+        >
+            <h4 className="thumb-title">{title}</h4>
+        </div>
     );
 };
+
 export default Thumb;
