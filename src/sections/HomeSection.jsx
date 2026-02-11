@@ -1,11 +1,9 @@
 import Banner from "../components/Banner";
-import TagName from "../components/TagName";
 import Thumb from "../components/Thumb";
 
 const HomeSection = () => {
     return (
         <>
-            <h2>Home Section Component</h2>
             <div>
                 <Banner />
                 <div className="thumb-container">
@@ -16,8 +14,6 @@ const HomeSection = () => {
                     <Thumb />
                     <Thumb />
                 </div>
-
-                <TagName />
             </div>
         </>
     );
