@@ -5,7 +5,7 @@ const HomeSection = () => {
     return (
         <>
             <div>
-                <Banner />
+                <Banner backgroundUrl="/src/assets/coastalCliff.png" />
                 <div className="thumb-container">
                     <Thumb />
                     <Thumb />
