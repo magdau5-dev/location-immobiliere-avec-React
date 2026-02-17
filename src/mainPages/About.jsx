@@ -1,9 +1,11 @@
-const About = () => {
-  return (
-    <>
-      <p>ici c'est about</p>
-    </>
-  )
-}
+import AboutSection from "../sections/AboutSection";
 
-export default About
+const About = () => {
+    return (
+        <>
+            <AboutSection />
+        </>
+    );
+};
+
+export default About;
