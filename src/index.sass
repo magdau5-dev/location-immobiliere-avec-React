@@ -157,3 +157,42 @@ img
   font-size: 48px
   font-weight: 700
   text-align: center
+
+
+
+// ============= PAGES ============= //
+
+// ------ 404 ------ //
+.notFound-page
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+.notFound-content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  flex-grow: 1      // permet à l'élément de prendre l’espace restant
+  flex-shrink: 1    // autorise l'élément à rétrécir si nécessaire
+  flex-basis: 0%    // taille de base = 0 pour partager l’espace équitablement
+
+  align-items: center
+  text-align: center
+
+  font-size: 36px
+  font-weight: 500
+  color: #FF6060
+  gap: 5rem
+  margin: 5rem 0
+
+.notFound-404
+  font-size: 288px
+  font-weight: 700
+  margin: 0px
+
+.redirection-404
+  font-size: 18px
+  font-weight: 500
+  color: #000000
+  text-decoration: underline
+  cursor: pointer
