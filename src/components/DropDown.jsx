@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-const DropDown = ({ title, description }) => {
+const DropDown = ({ title, description, children }) => {
     const [isOpen, setIsOpen] = useState(false); // État pour gérer l'ouverture du dropdown, de base isOpen est à false (faux)
 
     return (
@@ -20,7 +20,11 @@ const DropDown = ({ title, description }) => {
             </button>
 
             <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
-                {description}
+                {
+                    children ? children : description
+                    // Si je passe du contenu entre les balises <DropDown> CONTENU </DropDown> alors j'affiche le "children"
+                    // Sinon, j'affiche "description" du <DropDown description= "........" />.
+                }
             </div>
         </div>
     );
