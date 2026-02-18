@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.sass";
 
 import HomePage from "./mainPages/HomePage.jsx";
-import Gallery from "./mainPages/Gallery.jsx";
+import Logement from "./mainPages/Logement.jsx";
 import About from "./mainPages/About.jsx";
 import DefaultRoute from "./layout/DefaultRoute.js";
 import NotFound from "./mainPages/NotFound.jsx";
@@ -17,7 +17,7 @@ createRoot(document.getElementById("root")).render(
                 <Route element={<DefaultRoute />}>
                     {/* Routes de navigation  */}
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/logement" element={<Logement />} />
                     <Route path="/about" element={<About />} />
                 </Route>
 
