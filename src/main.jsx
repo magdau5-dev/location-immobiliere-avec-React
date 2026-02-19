@@ -17,12 +17,12 @@ createRoot(document.getElementById("root")).render(
                 <Route element={<DefaultRoute />}>
                     {/* Routes de navigation  */}
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/logement" element={<Logement />} />
+                    <Route path="/logement/:id" element={<Logement />} />
                     <Route path="/about" element={<About />} />
                 </Route>
 
                 {/* Route de redirection pour la page erreur 404 */}
-                <Route path="/*" element={<NotFound />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
     </StrictMode>,

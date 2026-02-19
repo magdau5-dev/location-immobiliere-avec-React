@@ -12,6 +12,7 @@ const HomeSection = () => {
                     {logement.map((item) => (
                         <Thumb
                             key={item.id}
+                            id={item.id}
                             cover={item.cover}
                             title={item.title}
                         />
