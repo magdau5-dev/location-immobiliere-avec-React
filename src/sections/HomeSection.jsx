@@ -6,7 +6,7 @@ const HomeSection = () => {
     return (
         <>
             <div>
-                <Banner backgroundUrl="/src/assets/coastalCliff.png" />
+                <Banner backgroundUrl="/src/assets/coastalCliff.png" text="Chez vous, partout et ailleurs" />
 
                 <div className="thumb-container">
                     {logement.map((item) => (

@@ -1,14 +1,8 @@
-:root
-  font-family: "Montserrat", sans-serif
-  font-family: "Montserrat", sans-serif
-
 #root
   width: 1240px
-  width: 1240px
   margin: 0 auto
-
-
   text-align: center
+  font-family: 'Montserrat', sans-serif
 
 body
   margin: 0
@@ -21,6 +15,7 @@ img
   width: 100%
   height: 100%
   object-fit: cover
+
 
 // ============= COMPONENTS ============= //
 
@@ -51,114 +46,6 @@ img
     &:hover
       text-decoration: underline
 
-// ------ Footer ------ //
-.footer-container
-  display: flex
-  flex-direction: column
-  align-items: center
-  background-color: #000
-  color: #ffffff
-  font-size: 24px
-  font-weight: 500
-  padding: 3rem 0 1rem 0
-
-
-// ------ Thumb card ------ //
-
-// Enlève la ligne sous le texte de Link
-.thumb-link
-  text-decoration: none
-
-.thumb-card
-  display: flex
-  align-items: flex-end  
-  justify-content: flex-start 
-  width: 340px
-  height: 340px
-  border-radius: 16px
-  background-size: cover
-  background-position: center
-
-  position: relative     
-  overflow: hidden       
-
-  // ::after  => ajoute un élément virtuel après
-  // &        => fait référence à la classe parent en Sass
-  // &::after => pseudo-élément appliqué à la classe actuelle
-  &::after                
-    content: "" // Ça crée une couche invisible au-dessus de la card
-    position: absolute
-    inset: 0
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(10, 10, 10, 0) 42%,
-      rgba(4, 4, 4, 0.205) 99.99%,
-      rgba(0, 0, 0, 0.5) 100%
-    )
-    z-index: 0
-
-.thumb-title
-  margin: 0.5rem
-  width: 175px
-  text-align: left
-  padding: 1rem
-  color: #fff
-  font-size: 18px
-  font-weight: 700
-
-  position: relative  
-  z-index: 1           
-
-.thumb-container
-  display: flex
-  flex-wrap: wrap
-  gap: 3.5rem
-  justify-content: center
-
-  background-color: #F6F6F6
-  border-radius: 25px
-  padding: 3.5rem 0rem
-
-
-// ------ Tag ------ //
-.tag
-  width: 115px
-  height: 25px
-  border-radius: 10px
-  background-color: #FF6060
-  color: #ffffff
-  font-size: 14px
-img
-  width: 100%
-  height: 100%
-  object-fit: cover
-
-// ============= COMPONENTS ============= //
-
-// ------ BoxImg ------ //
-.box-img
-  display: flex
-  overflow: hidden
-  cursor: pointer
-
-// ------ NavBar ------ //
-.navBar-container
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding: 1rem 0
-
-.navBar-links
-  display: flex
-  gap: 4rem
-  font-size: 24px
-  font-weight: 500
-
-  display: flex
-  align-items: center
-  justify-content: center
-
 
 // ------ Banner ------ //
 .banner-container
@@ -185,7 +72,6 @@ img
   z-index: 1
   color: #ffffff
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55)
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3)
   font-size: 48px
   font-weight: 700
   text-align: center
@@ -236,6 +122,23 @@ img
     font-size: 16px
     line-height: 1.5
 
+
+// ------ Tag ------ //
+.tag
+  min-width: 115px
+  height: 25px
+  padding: 0 0.5rem
+  border-radius: 10px
+  background-color: #FF6060
+  color: #ffffff
+  font-size: 14px
+  font-weight: 700
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+
 // ------ Carrousel ------ //
 .carousel
   position: relative
@@ -272,6 +175,18 @@ img
   color: white
   font-size: 24px
 
+
+// ------ Rating Star ------ //
+.rating
+  display: flex
+  gap: 0.5rem
+
+.star
+  font-size: 24px
+  color: #E3E3E3
+
+.star.active
+  color: #FF6060
 
 
 
@@ -328,6 +243,7 @@ img
     &:hover
       text-decoration: underline
 
+
 // ------ Footer ------ //
 .footer-container
   display: flex
@@ -341,6 +257,11 @@ img
 
 
 // ------ Thumb card ------ //
+.thumb-link
+  text-decoration: none
+  color: inherit
+  cursor: pointer
+
 .thumb-card
   display: flex
   align-items: flex-end  
@@ -378,6 +299,7 @@ img
   color: #fff
   font-size: 18px
   font-weight: 700
+  
 
   position: relative  
   z-index: 1           
@@ -393,47 +315,77 @@ img
   padding: 3.5rem 0rem
 
 
-// ------ Tag ------ //
-.tag
-  width: 115px
-  height: 25px
-  border-radius: 10px
-  background-color: #FF6060
-  color: #ffffff
-  font-size: 14px
-  font-weight: 500
+//------ Logement ------ //
+.logement-header
+  display: flex
+  flex-direction: column
+  gap: 1.5rem
+  margin-top: 2rem
 
+.header-row
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.title-block
+  text-align: left
+
+.title-block h1
+  margin: 0
+  font-size: 36px
+  font-weight: 500
+  color: #FF6060
+
+.location
+  margin-top: 0.5rem
+  font-size: 18px
+
+.host
   display: flex
   align-items: center
-  justify-content: center
+  gap: 1rem
 
+.host p
+  font-size: 18px
+  font-weight: 500
+  color: #FF6060
+  text-align: right
 
-// ------ Banner ------ //
-.banner-container
-  position: relative
-  width: 100%
-  height: 223px
-  margin-bottom: 2rem
-  border-radius: 25px
-  background-size: cover
-  background-position: center
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+.host-picture
   overflow: hidden
 
+.host-picture img
+  width: 100%
+  height: 100%
+  object-fit: cover
+  border-radius: 50%
+
+.tags
   display: flex
-  align-items: center
-  justify-content: center
+  gap: 0.5rem
+  flex-wrap: wrap
 
-.banner-overlay
-  position: absolute
-  inset: 0
+.rating
+  display: flex
+  gap: 0.5rem
 
-.banner-text
-  position: relative
-  z-index: 1
-  color: #ffffff
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55)
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3)
-  font-size: 48px
-  font-weight: 700
-  text-align: center
+.star
+  font-size: 24px
+  color: #E3E3E3
+
+.star.active
+  color: #FF6060
+
+.dropdown-container
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 2rem
+  margin-top: 2rem
+
+.equipment-list
+  list-style: none
+  padding: 0
+  margin: 0
+
+.equipment-list li
+  margin-bottom: 0.5rem

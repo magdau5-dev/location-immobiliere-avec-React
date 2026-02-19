@@ -1,7 +1,8 @@
 const Banner = ({
     className = "",
     backgroundUrl,
-    overlayColor = "rgba(0, 0, 0, 0.6)",
+    overlayColor = "rgba(0, 0, 0, 0.5)",
+    text,
 }) => {
     return (
         <div
@@ -13,7 +14,7 @@ const Banner = ({
                 style={{ backgroundColor: overlayColor }}
             ></div>
 
-            <p className="banner-text">Chez vous, partout et ailleurs</p>
+            {text && <p className="banner-text">{text}</p>}
         </div>
     );
 };

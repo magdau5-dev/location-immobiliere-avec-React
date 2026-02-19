@@ -1,13 +1,11 @@
-import HomeSection from "../sections/HomeSection";
+import HomeSection from '../sections/HomeSection';
 
 const HomePage = () => {
-    return (
-        <>
-            <div>
-                <HomeSection />
-            </div>
-        </>
-    );
+	return (
+		<>
+			<HomeSection />
+		</>
+	);
 };
 
 export default HomePage;
