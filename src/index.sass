@@ -1,9 +1,12 @@
 :root
   font-family: "Montserrat", sans-serif
+  font-family: "Montserrat", sans-serif
 
 #root
   width: 1240px
+  width: 1240px
   margin: 0 auto
+
 
   text-align: center
 
@@ -39,6 +42,283 @@ img
   gap: 4rem
   font-size: 24px
   font-weight: 500
+
+  a
+    text-decoration: none
+    cursor: pointer
+    color: inherit
+
+    &:hover
+      text-decoration: underline
+
+// ------ Footer ------ //
+.footer-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  background-color: #000
+  color: #ffffff
+  font-size: 24px
+  font-weight: 500
+  padding: 3rem 0 1rem 0
+
+
+// ------ Thumb card ------ //
+
+// Enlève la ligne sous le texte de Link
+.thumb-link
+  text-decoration: none
+
+.thumb-card
+  display: flex
+  align-items: flex-end  
+  justify-content: flex-start 
+  width: 340px
+  height: 340px
+  border-radius: 16px
+  background-size: cover
+  background-position: center
+
+  position: relative     
+  overflow: hidden       
+
+  // ::after  => ajoute un élément virtuel après
+  // &        => fait référence à la classe parent en Sass
+  // &::after => pseudo-élément appliqué à la classe actuelle
+  &::after                
+    content: "" // Ça crée une couche invisible au-dessus de la card
+    position: absolute
+    inset: 0
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(10, 10, 10, 0) 42%,
+      rgba(4, 4, 4, 0.205) 99.99%,
+      rgba(0, 0, 0, 0.5) 100%
+    )
+    z-index: 0
+
+.thumb-title
+  margin: 0.5rem
+  width: 175px
+  text-align: left
+  padding: 1rem
+  color: #fff
+  font-size: 18px
+  font-weight: 700
+
+  position: relative  
+  z-index: 1           
+
+.thumb-container
+  display: flex
+  flex-wrap: wrap
+  gap: 3.5rem
+  justify-content: center
+
+  background-color: #F6F6F6
+  border-radius: 25px
+  padding: 3.5rem 0rem
+
+
+// ------ Tag ------ //
+.tag
+  width: 115px
+  height: 25px
+  border-radius: 10px
+  background-color: #FF6060
+  color: #ffffff
+  font-size: 14px
+img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+// ============= COMPONENTS ============= //
+
+// ------ BoxImg ------ //
+.box-img
+  display: flex
+  overflow: hidden
+  cursor: pointer
+
+// ------ NavBar ------ //
+.navBar-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1rem 0
+
+.navBar-links
+  display: flex
+  gap: 4rem
+  font-size: 24px
+  font-weight: 500
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+// ------ Banner ------ //
+.banner-container
+  position: relative
+  width: 100%
+  height: 223px
+  margin-bottom: 2rem
+  border-radius: 25px
+  background-size: cover
+  background-position: center
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+  overflow: hidden
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+.banner-overlay
+  position: absolute
+  inset: 0
+
+.banner-text
+  position: relative
+  z-index: 1
+  color: #ffffff
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55)
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3)
+  font-size: 48px
+  font-weight: 700
+  text-align: center
+
+
+// ------ DropDown ------ //
+.dropdown
+  max-width: 1023px
+  margin-bottom: 1.5rem
+
+.dropdown-header
+  width: 100%
+  background-color: #FF6060
+  color: white
+  border: none
+  border-radius: 5px
+  padding: 0.8rem 1.2rem
+  font-size: 24px
+  font-weight: 700
+  display: flex
+  justify-content: space-between
+  align-items: center
+  cursor: pointer
+
+.dropdown-arrow
+  font-size: 18px
+  transition: transform 0.3s ease
+
+  &.open
+    transform: rotate(180deg)
+
+.dropdown-content
+  background-color: #F6F6F6
+  font-size: 21px
+  border-radius: 0 0 5px 5px
+  padding: 0 1.2rem
+  overflow: hidden
+  max-height: 0
+  transition: max-height 0.3s ease, padding 0.3s ease
+  text-align: left
+
+  &.open
+    max-height: 500px
+    padding: 1rem 1.2rem
+
+  p
+    margin: 0
+    font-size: 16px
+    line-height: 1.5
+
+// ------ Carrousel ------ //
+.carousel
+  position: relative
+  width: 100%
+  height: 500px
+  border-radius: 25px
+  overflow: hidden
+
+.carousel-image
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.carousel-button
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  background: none
+  border: none
+  color: white
+  font-size: 100px
+  cursor: pointer
+
+.carousel-button.left
+  left: 20px
+
+.carousel-button.right
+  right: 20px
+
+.carousel-counter
+  position: absolute
+  bottom: 15px
+  left: 50%
+  color: white
+  font-size: 24px
+
+
+
+
+// ============= PAGES ============= //
+
+// ------ 404 ------ //
+.notFound-page
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+.notFound-content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  flex-grow: 1      // permet à l'élément de prendre l’espace restant
+  flex-shrink: 1    // autorise l'élément à rétrécir si nécessaire
+  flex-basis: 0%    // taille de base = 0 pour partager l’espace équitablement
+
+  align-items: center
+  text-align: center
+
+  font-size: 36px
+  font-weight: 500
+  color: #FF6060
+  gap: 5rem
+  margin: 5rem 0
+
+.notFound-404
+  font-size: 288px
+  font-weight: 700
+  margin: 0px
+
+.redirection-404
+  font-size: 18px
+  font-weight: 500
+  color: #000000
+  text-decoration: underline
+  cursor: pointer
+
+
+// ------ About ------ //
+.about-dropdowns
+  display: flex
+  flex-direction: column
+  align-items: center
+
 
   a
     text-decoration: none
