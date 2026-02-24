@@ -5,8 +5,11 @@ import logement from "../json/logement.json";
 const HomeSection = () => {
     return (
         <>
-            <div>
-                <Banner backgroundUrl="/src/assets/coastalCliff.png" text="Chez vous, partout et ailleurs" />
+            <div className="home-section-container">
+                <Banner
+                    backgroundUrl="/src/assets/coastalCliff.png"
+                    text="Chez vous, partout et ailleurs"
+                />
 
                 <div className="thumb-container">
                     {logement.map((item) => (

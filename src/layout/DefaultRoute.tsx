@@ -5,8 +5,8 @@ import Header from "../navigation/Header";
 const DefaultRoute = () => {
     return (
         <div className="layout">
-            <Header />
-            <main>
+            <main className="main-content">
+                <Header />
                 <Outlet />
             </main>
             <Footer />

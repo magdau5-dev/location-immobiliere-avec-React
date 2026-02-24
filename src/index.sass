@@ -1,32 +1,27 @@
 #root
+  width: 1240px
   margin: 0 auto
+  text-align: center
   font-family: 'Montserrat', sans-serif
 
 body
-  margin: 0 auto
+  margin: 0
+  display: flex
+  place-items: center
+  min-width: 320px
+  min-height: 100vh
 
+.main-content
+  padding: 1rem
+
+@media (min-width: 376px)
+  .main-content
+    padding: 0
 
 img
   width: 100%
   height: 100%
   object-fit: cover
-
-
-// ============= LAYOUT (Taille des pages) ============= //
-.layout
-  min-height: 100vh
-  display: flex
-  flex-direction: column
-  align-items: center
-
-.layout > *
-  width: 100%
-  max-width: 1240px
-
-// Mobile
-@media (max-width: 768px)
-
-
 
 
 // ============= COMPONENTS ============= //
@@ -112,6 +107,7 @@ img
     border-radius: 10px
     justify-content: flex-start
     padding-left: 1rem
+    margin-bottom: 1rem
 
   .banner-text
     font-size: 24px
@@ -290,15 +286,23 @@ img
 .footer-container
   display: flex
   flex-direction: column
+  justify-content: center
   align-items: center
   background-color: #000
   color: #ffffff
   font-size: 24px
   font-weight: 500
-  padding: 3rem 0 1rem 0
+  height: 209px
+
+@media (max-width: 375px)
+  .footer-container
+    font-size: 12px
 
 
-// ------ Thumb card ------ //
+// ------ Home ------ //
+.home-section-container
+  width: 100%
+
 .thumb-link
   text-decoration: none
   color: inherit
@@ -355,6 +359,16 @@ img
   background-color: #F6F6F6
   border-radius: 25px
   padding: 3.5rem 0rem
+
+@media (max-width: 376px)
+  
+  .thumb-container
+    background-color: transparent
+    padding: 5px 0
+    gap: 1.2rem
+
+  .thumb-card
+    height: 255px
 
 
 //------ Logement ------ //
