@@ -1,15 +1,23 @@
 const BoxImg = ({
     src = "",
     alt = "image",
-    width = "150px",
-    height = "150px",
+    width,
+    height,
     onClick = () => {},
     className = "",
 }) => {
+    const style = () => {
+        if (width && height) {
+            return { width, height };
+        } else {
+            return undefined;
+        }
+    };
+
     return (
         <div
             className={`box-img ${className}`}
-            style={{ width, height }}
+            style={style()}
             onClick={onClick}
         >
             <img src={src} alt={alt} />

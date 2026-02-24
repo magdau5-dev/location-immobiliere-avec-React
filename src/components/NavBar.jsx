@@ -11,9 +11,8 @@ const NavBar = () => {
                     <BoxImg
                         src="/src/assets/logoKasa.png"
                         alt="Logo Kasa"
-                        width="210px"
-                        height="68px"
                         onClick={() => navigate("/")}
+                        className="navbar-logo"
                     />
                 </div>
 
