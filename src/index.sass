@@ -1,22 +1,31 @@
 #root
-  width: 1240px
-  margin: 0 auto
   text-align: center
   font-family: 'Montserrat', sans-serif
 
 body
   margin: 0
-  display: flex
-  place-items: center
-  min-width: 320px
   min-height: 100vh
 
-.main-content
-  padding: 1rem
+.layout
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  width: 100%
 
-@media (min-width: 376px)
-  .main-content
-    padding: 0
+.header-container
+  width: 100%
+  display: flex
+  justify-content: center
+
+.main-content
+  max-width: 1240px
+  width: 100%
+  margin: 0 auto
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  justify-content: center
+
 
 img
   width: 100%
@@ -44,6 +53,7 @@ img
 
 // ------ NavBar ------ //
 .navBar-container
+  width: 1240px
   display: flex
   justify-content: space-between
   align-items: center
@@ -64,6 +74,9 @@ img
       text-decoration: underline
 
 @media (max-width: 375px)
+  .navBar-container
+    padding: 1rem
+
   .navBar-links
     gap: 2rem
 
@@ -74,9 +87,11 @@ img
 
 // ------ Banner ------ //
 .banner-container
+  margin: 2.5rem 0
+
+.banner
   position: relative
   height: 223px
-  margin-bottom: 2rem
   border-radius: 25px
   background-size: cover
   background-position: center
@@ -101,13 +116,15 @@ img
   text-align: center
 
 @media (max-width: 375px)
-
   .banner-container
+    padding: 1rem
+    margin: 0
+
+  .banner
     height: 111px
     border-radius: 10px
     justify-content: flex-start
     padding-left: 1rem
-    margin-bottom: 1rem
 
   .banner-text
     font-size: 24px
@@ -268,7 +285,7 @@ img
 @media (max-width: 375px)
   .notFound-page
     padding: 1rem
-    
+
   .notFound-content
     font-size: 18px
   
@@ -297,6 +314,7 @@ img
 
 // ------ Footer ------ //
 .footer-container
+  width: 100%
   display: flex
   flex-direction: column
   justify-content: center
@@ -306,6 +324,7 @@ img
   font-size: 24px
   font-weight: 500
   height: 209px
+  margin-top: 3rem
 
 @media (max-width: 375px)
   .footer-container
@@ -385,6 +404,9 @@ img
 
 
 //------ Logement ------ //
+.logement-section-container
+  margin: 2.5rem 0
+
 .logement-header
   display: flex
   flex-direction: column

@@ -5,16 +5,18 @@ const Banner = ({
     text,
 }) => {
     return (
-        <div
-            className={`banner-container ${className}`}
-            style={{ backgroundImage: `url(${backgroundUrl})` }}
-        >
+        <div className="banner-container">
             <div
-                className="banner-overlay"
-                style={{ backgroundColor: overlayColor }}
-            ></div>
+                className={`banner ${className}`}
+                style={{ backgroundImage: `url(${backgroundUrl})` }}
+            >
+                <div
+                    className="banner-overlay"
+                    style={{ backgroundColor: overlayColor }}
+                ></div>
 
-            {text && <p className="banner-text">{text}</p>}
+                {text && <p className="banner-text">{text}</p>}
+            </div>
         </div>
     );
 };
