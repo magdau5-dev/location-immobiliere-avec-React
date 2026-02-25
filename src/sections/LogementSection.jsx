@@ -10,7 +10,6 @@ const LogementSection = ({ logement }) => {
             <Carousel pictures={logement.pictures} />
 
             <div className="logement-header">
-                {/* HEADER DESKTOP */}
                 <div className="container-host header-desktop">
                     <div className="title-block">
                         <h1>{logement.title}</h1>
@@ -29,7 +28,6 @@ const LogementSection = ({ logement }) => {
                     </div>
                 </div>
 
-                {/* TAGS + RATING */}
                 <div className="container-host">
                     <div className="tags">
                         {logement.tags.map((tag, index) => (
