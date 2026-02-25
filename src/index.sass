@@ -169,14 +169,24 @@ img
   text-align: left
 
   &.open
-    max-height: 500px
-    padding: 1rem 1.2rem
+    max-height: 300px
+    padding: 1rem
 
   p
     margin: 0
     font-size: 16px
     line-height: 1.5
 
+@media (max-width: 375px)
+  .dropdown-header
+    font-size: 13px
+    padding: 0.5rem 1rem
+
+  .dropdown-arrow
+    font-size: 14px
+
+  .dropdown-content
+    font-size: 11px
 
 // ------ Tag ------ //
 .tag
@@ -193,8 +203,15 @@ img
   align-items: center
   justify-content: center
 
+@media ( max-width: 375px )
+  .tag
+    min-width: 84px
+    height: 18px
+    font-size: 10px
+    border-radius: 5px
 
-// ------ Carrousel ------ //
+
+// ------ Carousel ------ //
 .carousel
   position: relative
   width: 100%
@@ -229,6 +246,16 @@ img
   left: 50%
   color: white
   font-size: 24px
+
+@media (max-width: 375px)
+  .carousel
+    height: 255px
+
+  .carousel-button
+    font-size: 24px
+
+  .carousel-counter
+    font-size: 14px
 
 
 // ------ Rating Star ------ //
@@ -329,6 +356,7 @@ img
 @media (max-width: 375px)
   .footer-container
     font-size: 12px
+    margin-top: 1.5rem
 
 
 // ------ Home ------ //
@@ -393,7 +421,6 @@ img
   padding: 3.5rem 0rem
 
 @media (max-width: 376px)
-  
   .thumb-container
     background-color: transparent
     padding: 5px 0
@@ -404,16 +431,17 @@ img
 
 
 //------ Logement ------ //
+
 .logement-section-container
-  margin: 2.5rem 0
+  margin-top: 2rem
 
 .logement-header
   display: flex
   flex-direction: column
-  gap: 1.5rem
+  gap: 2rem
   margin-top: 2rem
 
-.header-row
+.container-host
   display: flex
   justify-content: space-between
   align-items: center
@@ -430,6 +458,8 @@ img
 .location
   margin-top: 0.5rem
   font-size: 18px
+
+// HOST
 
 .host
   display: flex
@@ -451,10 +481,18 @@ img
   object-fit: cover
   border-radius: 50%
 
+// MOBILE HOST HIDDEN BY DEFAULT
+.host-mobile
+  display: none
+
+// TAGS
+
 .tags
   display: flex
   gap: 0.5rem
   flex-wrap: wrap
+
+// RATING
 
 .rating
   display: flex
@@ -466,6 +504,8 @@ img
 
 .star.active
   color: #FF6060
+
+// DROPDOWN
 
 .dropdown-container
   display: grid
@@ -480,3 +520,54 @@ img
 
 .equipment-list li
   margin-bottom: 0.5rem
+
+
+// ================= MOBILE =================
+
+@media (max-width: 375px)
+
+  .logement-section-container
+    padding: 0 1rem
+    margin-top: 1rem
+
+  .logement-header
+    gap: 0rem
+
+  // Cache host desktop
+  .host-desktop
+    display: none
+
+  .rating-host-mobile
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    
+  // Affiche host mobile
+  .host-mobile
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    width: 100%
+
+  .title-block h1
+    font-size: 18px
+
+  .location
+    font-size: 14px
+
+  .host p
+    font-size: 12px
+
+  .container-host
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+
+  .dropdown-container
+    grid-template-columns: 1fr
+    gap: 0rem
+    margin: 1rem 0 0 0
+
+  .star
+    font-size: 18px

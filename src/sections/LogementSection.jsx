@@ -10,13 +10,14 @@ const LogementSection = ({ logement }) => {
             <Carousel pictures={logement.pictures} />
 
             <div className="logement-header">
-                <div className="header-row">
+                {/* HEADER DESKTOP */}
+                <div className="container-host header-desktop">
                     <div className="title-block">
                         <h1>{logement.title}</h1>
                         <p className="location">{logement.location}</p>
                     </div>
 
-                    <div className="host">
+                    <div className="host host-desktop">
                         <p>{logement.host.name}</p>
                         <BoxImg
                             src={logement.host.picture}
@@ -28,14 +29,29 @@ const LogementSection = ({ logement }) => {
                     </div>
                 </div>
 
-                <div className="header-row">
+                {/* TAGS + RATING */}
+                <div className="container-host">
                     <div className="tags">
                         {logement.tags.map((tag, index) => (
                             <TagName key={index} name={tag} />
                         ))}
                     </div>
 
-                    <Rating value={logement.rating} />
+                    <div className="rating-host-mobile">
+                        <Rating value={logement.rating} />
+
+                        {/* Le host en mobile est visible uniquement en mobile version */}
+                        <div className="host host-mobile">
+                            <p>{logement.host.name}</p>
+                            <BoxImg
+                                src={logement.host.picture}
+                                alt={logement.host.name}
+                                width="32px"
+                                height="32px"
+                                className="host-picture"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
 
