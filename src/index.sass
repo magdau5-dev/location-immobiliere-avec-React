@@ -6,6 +6,11 @@ body
   margin: 0
   min-height: 100vh
 
+
+// ======================================= //
+// ======= DefaultRoute enter page ======= //
+// ======================================= //
+
 .layout
   min-height: 100vh
   display: flex
@@ -27,67 +32,9 @@ body
   justify-content: center
 
 
-img
-  width: 100%
-  height: 100%
-  object-fit: cover
-
-
+// ====================================== //
 // ============= COMPONENTS ============= //
-
-// ------ BoxImg ------ //
-.box-img
-  display: flex
-  overflow: hidden
-  cursor: pointer
-
-.navbar-logo
-  width: 210px
-  height: 68px
-
-@media (max-width: 375px)
-  .navbar-logo
-    width: 145px
-    height: 48px
-
-
-// ------ NavBar ------ //
-.navBar-container
-  width: 1240px
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding: 1rem 0
-
-.navBar-links
-  display: flex
-  gap: 4rem
-  font-size: 24px
-  font-weight: 500
-
-  a
-    text-decoration: none
-    cursor: pointer
-    color: inherit
-
-    &:hover
-      text-decoration: underline
-
-    &.active
-      text-decoration: underline
-
-@media (max-width: 375px)
-  .navBar-container
-    width: 100%
-    padding: 1rem
-
-  .navBar-links
-    gap: 2rem
-
-    a
-      text-transform: uppercase
-      font-size: 12px
-
+// ====================================== //
 
 // ------ Banner ------ //
 .banner-container
@@ -119,21 +66,58 @@ img
   font-weight: 700
   text-align: center
 
-@media (max-width: 375px)
-  .banner-container
-    padding: 1rem
-    margin: 0
 
-  .banner
-    height: 111px
-    border-radius: 10px
-    justify-content: flex-start
-    padding-left: 1rem
+// ------ BoxImg ------ //
+.box-img
+  display: flex
+  overflow: hidden
+  cursor: pointer
 
-  .banner-text
-    font-size: 24px
-    text-align: left
-    max-width: 225px
+img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.navbar-logo
+  width: 210px
+  height: 68px
+
+
+// ------ Carousel ------ //
+.carousel
+  position: relative
+  width: 100%
+  height: 500px
+  border-radius: 25px
+  overflow: hidden
+
+.carousel-image
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.carousel-button
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  background: none
+  border: none
+  color: white
+  font-size: 100px
+  cursor: pointer
+
+.carousel-button.left
+  left: 20px
+
+.carousel-button.right
+  right: 20px
+
+.carousel-counter
+  position: absolute
+  bottom: 15px
+  left: 50%
+  color: white
+  font-size: 24px
 
 
 // ------ DropDown ------ //
@@ -181,85 +165,31 @@ img
     font-size: 16px
     line-height: 1.5
 
-@media (max-width: 375px)
-  .dropdown-header
-    font-size: 13px
-    padding: 0.5rem 1rem
 
-  .dropdown-arrow
-    font-size: 14px
-
-  .dropdown-content
-    font-size: 11px
-
-// ------ Tag ------ //
-.tag
-  min-width: 115px
-  height: 25px
-  padding: 0 0.5rem
-  border-radius: 10px
-  background-color: #FF6060
-  color: #ffffff
-  font-size: 14px
-  font-weight: 700
-
+// ------ NavBar ------ //
+.navBar-container
+  width: 1240px
   display: flex
+  justify-content: space-between
   align-items: center
-  justify-content: center
+  padding: 1rem 0
 
-@media ( max-width: 375px )
-  .tag
-    min-width: 84px
-    height: 18px
-    font-size: 10px
-    border-radius: 5px
-
-
-// ------ Carousel ------ //
-.carousel
-  position: relative
-  width: 100%
-  height: 500px
-  border-radius: 25px
-  overflow: hidden
-
-.carousel-image
-  width: 100%
-  height: 100%
-  object-fit: cover
-
-.carousel-button
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
-  background: none
-  border: none
-  color: white
-  font-size: 100px
-  cursor: pointer
-
-.carousel-button.left
-  left: 20px
-
-.carousel-button.right
-  right: 20px
-
-.carousel-counter
-  position: absolute
-  bottom: 15px
-  left: 50%
-  color: white
+.navBar-links
+  display: flex
+  gap: 4rem
   font-size: 24px
+  font-weight: 500
 
-@media (max-width: 375px)
-  .carousel
-    height: 255px
+  a
+    text-decoration: none
+    cursor: pointer
+    color: inherit
 
-  .carousel-button
-    font-size: 24px
+    &:hover
+      text-decoration: underline
 
-  .carousel-counter
-    font-size: 14px
+    &.active
+      text-decoration: underline
 
 
 // ------ Rating Star ------ //
@@ -275,108 +205,23 @@ img
   color: #FF6060
 
 
-
-// ============= PAGES ============= //
-
-// ------ 404 ------ //
-.notFound-page 
-  min-height: 100vh
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-
-.notFound-content
-  display: flex
-  flex-direction: column
-  justify-content: center
-  flex-grow: 1      // permet à l'élément de prendre l’espace restant
-  flex-shrink: 1    // autorise l'élément à rétrécir si nécessaire
-  flex-basis: 0%    // taille de base = 0 pour partager l’espace équitablement
-
-  align-items: center
-  text-align: center
-
-  font-size: 36px
-  font-weight: 500
-  color: #FF6060
-  gap: 5rem
-  margin: 5rem 0
-
-.notFound-404
-  font-size: 288px
-  font-weight: 700
-  margin: 0px
-
-.redirection-404
-  font-size: 18px
-  font-weight: 500
-  color: #000000
-  text-decoration: underline
-  cursor: pointer
-
-@media (max-width: 375px)
-  .notFound-page
-    padding: 1rem
-
-  .notFound-content
-    font-size: 18px
-    margin: 0
-  
-  .notFound-404
-    font-size: 99px
-  
-  .redirection-404
-    font-size: 14px
-
-
-// ------ About ------ //
-.about-dropdowns
-  display: flex
-  flex-direction: column
-  align-items: center
-  margin-top: 5rem
-  gap: 1.7rem
-
-  a
-    text-decoration: none
-    cursor: pointer
-    color: inherit
-
-    &:hover
-      text-decoration: underline
-  
-@media (max-width: 375px)
-  .about-dropdowns
-    padding: 0 1rem
-    margin-top: 2rem
-    gap: 0
-
-
-// ------ Footer ------ //
-.footer-container
-  width: 100%
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  background-color: #000
+// ------ TagName ------ //
+.tag
+  min-width: 115px
+  height: 25px
+  padding: 0 0.5rem
+  border-radius: 10px
+  background-color: #FF6060
   color: #ffffff
-  font-size: 24px
-  font-weight: 500
-  height: 209px
-  margin-top: 3rem
+  font-size: 14px
+  font-weight: 700
 
-@media (max-width: 375px)
-  .footer-container
-    font-size: 12px
-    margin-top: 1.5rem
+  display: flex
+  align-items: center
+  justify-content: center
 
 
-// ------ Home ------ //
-.home-section-container
-  width: 100%
-
+// ------ Thumb ------ //
 .thumb-link
   text-decoration: none
   color: inherit
@@ -419,10 +264,35 @@ img
   color: #fff
   font-size: 18px
   font-weight: 700
-  
 
   position: relative  
-  z-index: 1           
+  z-index: 1         
+
+
+// ================================= //
+// ============= PAGES ============= //
+// ================================= //
+
+// ------ About ------ //
+.about-dropdowns
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 5rem
+  gap: 1.7rem
+
+  a
+    text-decoration: none
+    cursor: pointer
+    color: inherit
+
+    &:hover
+      text-decoration: underline
+  
+
+// ------ Home ------ //
+.home-section-container
+  width: 100%  
 
 .thumb-container
   display: flex
@@ -433,15 +303,6 @@ img
   background-color: #F6F6F6
   border-radius: 25px
   padding: 3.5rem 0rem
-
-@media (max-width: 376px)
-  .thumb-container
-    background-color: transparent
-    padding: 5px 0
-    gap: 1.2rem
-
-  .thumb-card
-    height: 255px
 
 
 //------ Logement ------ //
@@ -525,9 +386,154 @@ img
 .equipment-list li
   margin-bottom: 0.5rem
 
+  
+// ------ 404 ------ //
+.notFound-page 
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.notFound-content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  flex-grow: 1      // permet à l'élément de prendre l’espace restant
+  flex-shrink: 1    // autorise l'élément à rétrécir si nécessaire
+  flex-basis: 0%    // taille de base = 0 pour partager l’espace équitablement
+
+  align-items: center
+  text-align: center
+
+  font-size: 36px
+  font-weight: 500
+  color: #FF6060
+  gap: 5rem
+  margin: 5rem 0
+
+.notFound-404
+  font-size: 288px
+  font-weight: 700
+  margin: 0px
+
+.redirection-404
+  font-size: 18px
+  font-weight: 500
+  color: #000000
+  text-decoration: underline
+  cursor: pointer
+
+
+// ------ Footer ------ //
+.footer-container
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: #000
+  color: #ffffff
+  font-size: 24px
+  font-weight: 500
+  height: 209px
+  margin-top: 3rem
+
+
 
 @media (max-width: 375px)
+  // ----------------------------
+  // Media queries for COMPONENTS 
+  //-----------------------------
 
+  // ------ Banner ------ //
+  .banner-container
+    padding: 1rem
+    margin: 0
+
+  .banner
+    height: 111px
+    border-radius: 10px
+    justify-content: flex-start
+    padding-left: 1rem
+
+  .banner-text
+    font-size: 24px
+    text-align: left
+    max-width: 225px
+
+  // ------ BoxImg ------ //
+  .navbar-logo
+    width: 145px
+    height: 48px
+
+  // ------ Carousel ------ //
+  .carousel
+    height: 255px
+
+  .carousel-button
+    font-size: 24px
+
+  .carousel-counter
+    font-size: 14px
+
+  // ------ DropDown ------ //
+  .dropdown-header
+    font-size: 13px
+    padding: 0.5rem 1rem
+
+  .dropdown-arrow
+    font-size: 14px
+
+  .dropdown-content
+    font-size: 11px
+
+  // ------ NavBar ------ //
+  .navBar-container
+    width: 100%
+    padding: 1rem
+
+  .navBar-links
+    gap: 2rem
+
+    a
+      text-transform: uppercase
+      font-size: 12px
+
+  // ------ Rating Star ------ //
+  .star
+    font-size: 18px
+
+  // ------ TagName ------ //
+  .tag
+    min-width: 84px
+    height: 18px
+    font-size: 10px
+    border-radius: 5px
+
+  // ------ Thumb ------ //
+  .thumb-card
+    height: 255px
+
+
+
+  // ----------------------------
+  // Media queries for PAGES 
+  //-----------------------------
+
+  // ------ About ------ //
+  .about-dropdowns
+    padding: 0 1rem
+    margin-top: 2rem
+    gap: 0
+
+  // ------ Home ------ //
+  .thumb-container
+    background-color: transparent
+    padding: 5px 0
+    gap: 1.2rem
+
+  // ------ Logement ------ //
   .logement-section-container
     padding: 0 1rem
     margin-top: 1rem
@@ -573,3 +579,22 @@ img
 
   .star
     font-size: 18px
+
+  // ------ NotFound ------ //
+  .notFound-page
+    padding: 1rem
+
+  .notFound-content
+    font-size: 18px
+    margin: 0
+  
+  .notFound-404
+    font-size: 99px
+  
+  .redirection-404
+    font-size: 14px
+
+  // ------ Footer ------ //
+  .footer-container
+    font-size: 12px
+    margin-top: 1.5rem
